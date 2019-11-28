@@ -1,0 +1,535 @@
+@charset "UTF-8";
+/* CSS Document */
+/* ------------------------------------------------------*/
+/* clearfix huck */
+/* ------------------------------------------------------*/
+.clearfix {
+  display: inline-table;
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  height: 0px;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+/* Hides from IE-mac ＼*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+body {
+  font-size: 1.4rem;
+  color: #444444;
+  line-height: 1.4;
+}
+
+.font_l {
+  font-size: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a img:hover {
+  opacity: 0.7;
+}
+
+input[type=submit],
+input[type=button] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+}
+input[type=submit]::-webkit-search-decoration,
+input[type=button]::-webkit-search-decoration {
+  display: none;
+}
+input[type=submit]::focus,
+input[type=button]::focus {
+  outline-offset: -2px;
+}
+
+/*ヘッダー*/
+header {
+  position: static;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+}
+header .logo {
+  max-width: 140px;
+  transform: translate3d(0px, 0px, 0);
+  transition: 500ms;
+  padding: 8px 0 7px 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+header .headernav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+}
+header .headernav div {
+  float: left;
+  width: 50px;
+  height: 51px;
+}
+header .headernav .search-open {
+  background: url(../../img/common/search.png) no-repeat center center #b4b4b4;
+  background-size: 20px;
+}
+header .headernav .search-open.close {
+  background: url(../../img/common/close.png) no-repeat center center #b4b4b4;
+  background-size: 20px;
+}
+header .headernav .nav-open {
+  background: url(../../img/common/open.png) no-repeat center center #273650;
+  background-size: 24px;
+}
+header .headernav .nav-open.close {
+  background: url(../../img/common/close.png) no-repeat center center #273650;
+  background-size: 24px;
+}
+
+header.lower {
+  transition: 500ms;
+  /*padding: 5px;*/
+  padding-bottom: 0;
+}
+
+header .logo {
+  transform: translate3d(0px, 0px, 0);
+  transition: 500ms;
+  width: 270px;
+}
+
+header.lower .logo {
+  width: 100px;
+  transform: translate3d(0px, 0px, 0);
+  transition: 500ms;
+}
+
+.close_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.search {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgba(39, 54, 80, 0.95);
+}
+.search.view {
+  display: block;
+}
+.search .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+.search .inner h2 {
+  color: #fff;
+  font-family: "PT Serif", serif;
+  font-weight: normal;
+}
+.search .inner form {
+  position: relative;
+}
+.search .inner form:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+}
+.search .inner input[type=submit] {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.search .inner input[type=text] {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  border-bottom: 3px solid #fff !important;
+  font-size: 180% !important;
+  padding: 0.4em 0 !important;
+  padding-left: 40px !important;
+  background-color: transparent !important;
+  background-image: url(../../img/common/search2.gif) !important;
+  background-repeat: no-repeat !important;
+  background-position: left 5px center !important;
+  background-size: 24px !important;
+  text-indent: 0 !important;
+  color: #fff !important;
+}
+.search .inner input[type=text]:focus {
+  outline: none !important;
+}
+
+.sidenav {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: translateX(-100%);
+  transition: 0.3s ease-out;
+  background-color: rgba(39, 54, 80, 0.6);
+}
+.sidenav.view {
+  transform: translateX(0);
+}
+.sidenav .close_wrap {
+  left: auto;
+  right: 350px;
+}
+.sidenav nav {
+  float: right;
+  width: 100%;
+  max-width: 350px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.1s ease-out 0.2s, opacity 0.2s ease-out 0.1s;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding-top: 25px;
+  padding-left: 3%;
+  padding-right: 40px;
+}
+.sidenav nav a[target=_blank] span:after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 1em;
+  background: url(../../img/common/link_out2.gif) no-repeat right 3% center;
+  background-size: contain;
+}
+.sidenav nav p {
+  font-family: "PT Serif", serif;
+  font-weight: normal;
+  font-size: 170%;
+  margin-bottom: 2%;
+}
+.sidenav nav ul {
+  font-size: 110%;
+}
+.sidenav nav ul li a {
+  position: relative;
+  display: block;
+}
+.sidenav nav > ul > li > a {
+  padding: 0.8em 0;
+  border-bottom: 1px solid #e6e6e6;
+  transition: 0.5s;
+  color: #273650;
+}
+.sidenav nav > ul > li > a:hover, .sidenav nav > ul > li > a.current {
+  border-bottom: 1px solid #273650;
+}
+.sidenav nav > ul > li > a:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-right: 1px solid #273650;
+  border-bottom: 1px solid #273650;
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+}
+.sidenav nav > ul > li > ul {
+  font-size: 90%;
+  padding-top: 1em;
+}
+.sidenav nav > ul > li > ul li a {
+  padding: 0.5em 0;
+  padding-left: 16px;
+  color: #777;
+  border-bottom: solid 1px #fff;
+  transition: 0.5s;
+}
+.sidenav nav > ul > li > ul li a:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-right: 1px solid #777;
+  border-bottom: 1px solid #777;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+}
+.sidenav nav > ul > li > ul li a:hover {
+  border-bottom: 1px solid #273650;
+}
+.sidenav.view nav {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+#copy {
+  text-align: center;
+  padding: 1% 0;
+  color: #FFFFFF;
+  background-color: #273650;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*下層共通*/
+.txt_red {
+  color: #e60012;
+}
+
+.content {
+  padding-top: 70px;
+}
+.content .topover {
+  transform: translateY(-8vw);
+}
+
+.outer_back {
+  background-color: #f5f5f5;
+}
+
+.pagettl {
+  text-align: center;
+  color: #fff;
+  background-color: #273650;
+  margin: 0 auto;
+  padding: 8% 0 13%;
+}
+.pagettl.photo {
+  background: url(../../img/common/visual.jpg) no-repeat center center;
+  background-size: cover;
+}
+.pagettl p {
+  font-family: "PT Serif", serif;
+  font-size: 200%;
+  font-weight: normal;
+}
+.pagettl h2 {
+  font-size: 130%;
+}
+
+.pagettl.clearfix {
+  background-color: #fff;
+  padding: 0;
+  border-bottom: 1px solid #eef8f6;
+  max-width: 80%;
+}
+.pagettl.clearfix div {
+  height: 150px;
+  background-color: #273650;
+}
+.pagettl.clearfix .txt {
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.pagettl.clearfix .img {
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+}
+
+.content .inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+.content .section_ttl {
+  text-align: center;
+  padding: 3em 1em;
+}
+.content .section_ttl p {
+  font-family: "PT Serif", serif;
+  font-size: 150%;
+  font-weight: normal;
+  margin-bottom: 0.6em;
+}
+.content .section_ttl p.company_txt {
+  font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  margin-top: 30px;
+  font-size: 100%;
+  text-align: left;
+}
+.content .section_ttl h3 {
+  display: inline-block;
+}
+.content .section_ttl h3:after {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 1px;
+  margin-top: 2em;
+  background-color: #273650;
+}
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
+
+  body {
+    font-size: 14px;
+    color: #444444;
+    line-height: 1.4;
+  }
+
+  header {
+    /*padding: 30px 40px 0;*/
+  }
+  header .logo {
+    max-width: 270px;
+  }
+  header .headernav {
+    z-index: 999;
+    top: 30px;
+    right: 40px;
+  }
+
+  /*アニメーション関連*/
+  header .headernav {
+    transition: 500ms;
+  }
+
+  header.lower .headernav {
+    transition: 500ms;
+    right: 0px;
+    top: 0px;
+  }
+
+  header {
+    background: none;
+    transition: 500ms;
+    /*padding: 10px;*/
+  }
+
+  /*下層共通*/
+  .outer_back {
+    background-color: #f5f5f5;
+  }
+
+  .pagettl p {
+    font-size: 400%;
+    font-family: "PT Serif", serif;
+  }
+
+  .pagettl.clearfix {
+    max-width: 90%;
+  }
+  .pagettl.clearfix div {
+    height: 400px;
+    width: 50%;
+    float: left;
+    background-color: #273650;
+  }
+  .pagettl.clearfix .txt {
+    box-sizing: border-box;
+    padding-top: 150px;
+  }
+
+  .content {
+    padding-top: 145px;
+  }
+  .content .section_ttl {
+    padding: 5em;
+  }
+  .content .section_ttl p {
+    font-size: 400%;
+  }
+  .content .section_ttl p.company_txt {
+    font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    margin-top: 50px;
+    font-size: 100%;
+    text-align: left;
+  }
+  .content .section_ttl h3:after {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .pagettl {
+    max-width: 1600px;
+  }
+
+  /*ナビ*/
+  /*フッダー*/
+}
+@media screen and (max-width: 780px) {
+  .pc {
+    display: none !important;
+  }
+
+  .sidenav nav {
+    padding-top: 15px;
+    padding-bottom: 75px;
+  }
+  .sidenav nav p {
+    font-size: 160%;
+  }
+}
