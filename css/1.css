@@ -1,0 +1,17 @@
+#jianzhengzhangzhiCRSlog{
+  float: top left
+}
+#logCRS {
+  max-width: 140px;
+  transform: translate3d(0px, 0px, 0);
+  transition: 500ms;
+  padding: 8px 0 7px 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+body{
+  background-image: url(../img/top/mv.jpg);
+  background-image: url(../img/top/mv1.jpg)
+}
