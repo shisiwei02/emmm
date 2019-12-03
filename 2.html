@@ -6,34 +6,110 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   
-  <style> 
-      .catch{text-align:center} 
-  </style> 
+
 </head>
 <link rel="stylesheet" type="text/css" href="./css/1.css">
 <body>
+    <img id="theImg" src="./img/top/mv.jpg"/>
+    <script>
+    var arr=['./img/top/mv.jpg','./img/top/mv1.jpg','./img/top/mv2.jpg'];
+    var atheImg=document.getElementById('theImg');
+    var t=1;
+    var setlntrval=setInterval(function()
+    {
+    atheImg.src=arr[t];
+    t++;
+    if(t==3)
+    {
+    t=0;
+    }
+    },4000)
+    </script>
+    <img id="theImg" src="./img/top/mv.jpg" />
 <header>
   <img id="logCRS" src="./img/top/0.svg">
+  <div class="headerlog">
+    <img id="logyj"  src="./img/top/16.png">
+  </div>
 </header>
 <h2 class="catch"><img src="./img/top/top_catch.png" srcset="./img/top/top_catch.png 1x,./img/top/top_catch@2x.png 2x" alt="ネオ・コーポレーションの感震ブレーカーで地震による電気火災を防ぐ"></h2>
 
 
-<section id="about" class="transparent menu_bl">
-    <div class="about_back">
-      <div class="bg3"></div>
-    </div>
-    <div class="about content_box">
-      <div class="inner">
-        <div class="ttl">
-            <img src="./img/top/about_txt.png" class="anim_0" alt="ネオ・コーポレーション 地震に感震×安心">
-            <img src="./img/top/about_txt_0.png" alt="" class="anim_1">
-          <h3 class="anim_2">震災時に発生する火災。全ての人を<br>その脅威から「感震ブレーカー」で守りたい。</h3>
-          <p>ネオ・コーポレーションは、地震による二次災害 (電気火災) 予防に有効な手段となる、産業用の感震装置「CRS」を開発しました。ネオ・コーポレーションの電子ブレーカー「N-EBシリーズ」に感震装置「CRS」を取り付けることで、地震の揺れを感知し、通電を自動的に遮断する「感震ブレーカー」へと進化します。</p>
-        <a class="btn anim_3" href="./product/">感震ブレーカーとは</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
+<div class="wrap">
+  <header>
+     <div class="headernav">
+      <div class="nav-open"></div>
+     </div>
+  </header>
+  <div class="sidenav" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
+    <div class="close_wrap"></div>
+     <nav>
+       <p>MENU</p>
+       <ul>
+         <li itemprop="name"><a itemprop="url" href="/">ネオ・コーポレーション<br>感震装置「CRS」トップへ</a>
+           <ul>
+             <li itemprop="name">
+                     <a itemprop="url" href="./#future">地震による電気火災の割合</a>
+                 </li>
+             <li itemprop="name">
+                 <a itemprop="url" href="./#product">感震装置「CRS」製品情報</a>
+                 </li>
+           </ul>
+         </li>
+         <li itemprop="name"><a itemprop="url" href="./product/">感震ブレーカー</a>
+           <ul>
+             <li itemprop="name">
+                     <a itemprop="url" href="./product/#breaker">感震ブレーカーとは</a>
+                      </li>
+             <li itemprop="name">
+                 <a itemprop="url" href="./product/#crs">感震装置「CRS」とは</a>
+                 </li>
+             <li itemprop="name">
+                 <a itemprop="url" href="./product/#target">導入対象の電子ブレーカー</a>
+                 </li>
+           </ul>
+         </li>
+         <li itemprop="name"><a itemprop="url" href="./important/">感震ブレーカーの重要性</a>
+           <ul>
+             <li itemprop="name">
+                 <a itemprop="url" href="./important/#about">地震火災について</a>
+                 </li>
+             <li itemprop="name">
+                 <a itemprop="url" href="./important/#types">地震火災の発生の種類</a>
+                 </li>
+             <li itemprop="name">
+                 <a itemprop="url" href="./important/#countermeasure">地震火災の対策として</a>
+                 </li>
+           </ul>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="./faq/">Q&amp;A</a>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="./company/">企業情報</a>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="./contact/">お問い合わせ</a>
+         </li>  
+         <li itemprop="name">
+             <a itemprop="url" href="https://www.neo-corporation.co.jp/privacy/informationsecuritypolicy.php" target="_blank"><span>情報セキュリティポリシー</span></a>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="https://www.neo-corporation.co.jp/privacy/index.php" target="_blank"><span>プライバシーポリシー</span></a>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="./sitemap/">サイトマップ</a>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="https://www.neo-corporation.co.jp/" target="_blank"><span>コーポレートサイト</span></a>
+         </li>
+         <li itemprop="name">
+             <a itemprop="url" href="https://jp.stanby.com/ats/neocorporation-saiyo/jobs" target="_blank"><span>採用サイト</span></a>
+         </li>
+       </ul>
+     </nav>
+  </div>
   
 </body>
 </html>
