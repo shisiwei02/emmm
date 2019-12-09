@@ -56,9 +56,8 @@ section .content_box {
   box-sizing: border-box;
 }
 .inner {
-  box-sizing: border-box;
-  height: 150%;
-  width: 100%;
+  position: absolute;
+  left: 0px;
 }
 .ttl{
   width: 40%;
@@ -73,16 +72,40 @@ section .content_box {
   font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
   font-weight: normal;
   color: #273650;
+  width: 490px;
 }
 .ttl p{
-  margin: 0 0 60px 0;
+  margin: 60px 0 60px 0;
   padding-right: 10px;
+  width: 400px;
 }
 .about.bg3 {
   height: 100%;
   background-image: linear-gradient(transparent 99%, rgba(255, 255, 255, 0.4) 1%), linear-gradient(90deg, transparent 99%, rgba(255, 255, 255, 0.4) 1%);
   background-size: 100px 100px;
   background-repeat: repeat;
+}
+.about.show .anim_3 {
+  transform: translate3d(0, 0, 0);
+  transition: 500ms ease-out 1000ms;
+  opacity: 1;
+}
+.btn {
+  color: #fff;
+  line-height: 2.2;
+  width: 250px;
+  padding: 1em 0;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s !important;
+  overflow: hidden;
+  border: 1px solid transparent;
+  text-align: center;
+  background-color: #0086cb;
 }
 
 #theImg{
@@ -106,4 +129,7 @@ summary, time, mark, audio, video{
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+}
+#bai{
+  background-image: url(../img/top/future@2x.jpg);
 }
