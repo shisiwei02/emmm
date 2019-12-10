@@ -1,3 +1,9 @@
+body {
+  font-size: 1.4rem;
+  color: #444444;
+  line-height: 1.4;
+  font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
 #jianzhengzhangzhiCRSlog{
   float: top left
 }
@@ -26,7 +32,6 @@
 }
 .about .inner {
   padding-left: 11%;
-  position: relative;
   width: 50%;
   padding-right: 0;
   background-color: #fff;
@@ -130,6 +135,84 @@ summary, time, mark, audio, video{
   vertical-align: baseline;
   background: transparent;
 }
-#bai{
-  background-image: url(../img/top/future@2x.jpg);
+.future {
+  background: url(../img/top/furure_back.jpg) no-repeat center center;
+  background-size: cover;
+}
+.future .inner .inner_inner > div.img {
+  width: 37%;
+  margin-right: 4%;
+  position: absolute;
+  top: 1700px;
+  left: 50px;
+}
+.future .inner .inner_inner > div {
+  box-sizing: border-box;
+  float: left;
+}
+.future .inner .inner_inner > div.img img {
+  max-width: 100%;
+}
+.future.show .anim_0 {
+  transform: scale(1);
+  opacity: 1;
+  transition: 500ms ease-out;
+}
+img, video {
+  vertical-align: bottom;
+}
+.future .inner .inner_inner > div.txt h3 {
+  font-size: 230%;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  margin-bottom: 30px;
+  position: absolute;
+}
+.future.show .anim_1 {
+  transform: scale(1);
+  opacity: 1;
+  transition: 500ms ease-out;
+}
+.future .anim_1 {
+  transform: scale(0.3);
+  opacity: 0;
+}
+.future .inner .inner_inner > div.txt p {
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+.future.show .anim_2 {
+  opacity: 1;
+  transition: 1000ms ease-out 300ms;
+}
+.future .anim_2 {
+  opacity: 0;
+}
+.future .inner .inner_inner > div.txt dl {
+  margin-bottom: 25px;
+}
+.future .inner .inner_inner > div.txt dl dd {
+  width: 100%;
+  background-color: #fff;
+  color: #444;
+  padding: 0.4em 0;
+  position: relative;
+}
+.future .inner .inner_inner > div.txt dl {
+  margin-bottom: 25px;
+}
+.future .inner .inner_inner > div.txt dl dd {
+  width: 100%;
+  background-color: #fff;
+  color: #444;
+  padding: 0.4em 0;
+  position: relative;
+}
+#txt{
+  position: absolute;
+  top: 1000px;
+  left: 20px;
+}
+.future .inner .inner_inner > div.txt{
+  position: absolute;
+  top: 1700px;
 }
